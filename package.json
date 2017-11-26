@@ -1,0 +1,16 @@
+{
+  "name": "socket_chat",
+  "version": "1.0.0",
+  "description": "Chat application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index,js"
+  },
+  "author": "Amit Chowdhury",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "socket.io": "^2.0.4"
+  }
+}

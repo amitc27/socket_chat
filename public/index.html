@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <ul class="pages" >
+    <li class="chat page">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="chatArea">
+			   <h3 class="active"></h3>
+            <ul class="activeusers"></ul>
+          </div>
+        </div>
+        
+        <div class="col-md-9">
+          <div class="chatArea">
+            <ul class="messages"></ul>
+          </div>
+        </div>
+        <input class="inputMessage" placeholder="Type here..."/>
+      </div>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <input id="username" class="usernameInput" placeholder="Username" type="text" maxlength="14" /><br>
+        <input id="password" class="usernameInput" placeholder="Password" type="text" maxlength="14" /><br>
+        <br>
+        <button class="btn-success">Login</button>
+      </div>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
