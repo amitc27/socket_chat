@@ -127,7 +127,7 @@ io.on('connection', function (socket) {
   socket.on('disconnect', function () {
     if (addedUser) {
       --numUsers;
-      users.slice(indexOf(socket.username),1);
+      users.slice(users.indexOf(socket.username),1);
       // echo globally that this client has left
       socket.broadcast.emit('user left', {
         username: socket.username,
