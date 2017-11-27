@@ -53,7 +53,7 @@ io.on('connection', function (socket) {
   socket.on('add user', function (user) {
     const db = app.locals.db;
     var usercollection = db.collection('users');
-    if(user && users.indexOf(user.username) === -1) {
+    if(user && user.username && users.indexOf(user.username) === -1) {
         usercollection.find({username:user.username, password:user.password}).toArray().then(function(data){
          if(!data.length){
           usercollection.insert({username:user.username, password:user.password}).then(function(data){
