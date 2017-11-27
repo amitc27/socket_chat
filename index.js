@@ -37,7 +37,7 @@ io.on('connection', function (socket) {
       username: socket.username,
       message: data
     });
-    if(data){
+    //if(data){
       const db = app.locals.db;
       var collection = db.collection('chat_history');
       collection.insert({
@@ -46,7 +46,7 @@ io.on('connection', function (socket) {
         date: new Date()
       }).then(function(data){
       });
-    }
+    //}
   });
 
   // when the client emits 'add user', this listens and executes

@@ -12,6 +12,7 @@ $(function() {
   var $usernameInput = $('#username'); // Input for username
   var $passwordInput = $('#password'); // Input for password
   var $messages = $('.messages'); // Messages area
+  var $submit = $('#submit'); // Messages area
   var $users = $('.activeusers'); // Users area
   var $user = $('.active'); // User
   var $inputMessage = $('.inputMessage'); // Input message input box
@@ -223,7 +224,16 @@ $(function() {
   $loginPage.click(function () {
     //$currentInput.focus();
   });
-
+  
+  $submit.click(function () {
+    if (username) {
+        sendMessage();
+        socket.emit('stop typing');
+        typing = false;
+      } else {
+        setUsername();
+      }
+  });
   // Focus input when clicking on the message input's border
   $inputMessage.click(function () {
     $inputMessage.focus();
